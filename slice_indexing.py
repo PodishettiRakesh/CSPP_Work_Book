@@ -55,4 +55,5 @@ def is_rotation(s1,s2):
     if s2 in new:
         return True
     return False
-print(is_rotation("keerthi","thikeer"))
+# print(is_rotation("keerthi","thikeer"))
+
