@@ -15,3 +15,16 @@ def fact(n):
         n=n-1
     return val
 # print(fact(5))
+
+
+'''
+Write a Python function to check if a given string is a palindrome or not.
+ A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
+'''
+def ispalindrone(word):
+    word=str(word)
+    if word[::-1]==word:
+        return True
+    return False
+# print(ispalindrone(55755))
+# print(ispalindrone("mommom"))
