@@ -65,3 +65,20 @@ def reverselist(lst):
     return newlst   
 
 # print(reverselist([1,2,3,4,5]))
+
+
+'''Write a Python function to generate the Fibonacci series up to n terms. 
+The Fibonacci series is a sequence of numbers where each number is the sum 
+of the two preceding ones, starting with 0 and 1.'''
+
+def fibonacci(n):
+    series=[0,1][:n]
+    # if n==1:
+    #     return series
+    # if n>1:
+    #     series.append(1)
+    while len(series)<n:
+        next_number=series[-1]+series[-2]
+        series.append(next_number)
+    return series
+# print(fibonacci(4))
