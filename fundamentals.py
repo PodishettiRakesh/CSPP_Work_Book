@@ -50,3 +50,18 @@ def countofWords(string):
     words=string.split(" ")
     return len(words)
 # print(countofWords("India is my country"))
+
+
+
+'''Write a Python function that takes a list as input and returns a 
+new list containing the elements of the input list in reverse order.'''
+def reverselist(lst):
+    # newlst=lst[::-1] 
+    # return newlst
+    newlst=[]
+    count=len(lst)
+    for i in range(count-1,-1,-1):
+        newlst.append(lst[i])
+    return newlst   
+
+# print(reverselist([1,2,3,4,5]))
