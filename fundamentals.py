@@ -41,3 +41,12 @@ def findmax(lst):
             big=i
     return big
 # print(findmax([1,2,3,4,5]))
+
+
+'''Write a Python function that takes a string as input and returns the count 
+of words in the string. Assume that words are separated by spaces.'''
+
+def countofWords(string):
+    words=string.split(" ")
+    return len(words)
+# print(countofWords("India is my country"))
