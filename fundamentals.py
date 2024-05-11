@@ -28,3 +28,16 @@ def ispalindrone(word):
     return False
 # print(ispalindrone(55755))
 # print(ispalindrone("mommom"))
+
+'''Write a Python function that takes a list of numbers as input 
+and returns the maximum element in the list.'''
+def find_max(lst):
+    return max(lst)
+# print(find_max([1,2,3,4]))
+def findmax(lst):
+    big=lst[0]
+    for i in lst:
+        if i>big:
+            big=i
+    return big
+# print(findmax([1,2,3,4,5]))
