@@ -23,4 +23,24 @@ def occurance(long,sub):
             count+=1
     #         print(sub)
     # print(count)
-# occurance("jaihanuman jai sr
+# occurance("jaihanuman jai sri ram)
+
+'''Write a Python program to compress a given string by replacing consecutive 
+repeated characters with a single character followed by the count of repetition using slicing operations.'''
+
+def replacing_Consecutive(s):
+    if not s:
+        return ""
+    output = ""
+    count = 1
+    for i in range(len(s) - 1):
+        if s[i] == s[i + 1]:
+            count += 1
+        else:
+            output += s[i] + str(count)
+            count = 1
+
+    output += s[-1] + str(count)
+        
+    return output
+# print(replacing_Consecutive("alluarjuuuun"))
