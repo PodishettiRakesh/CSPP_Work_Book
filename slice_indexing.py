@@ -44,3 +44,15 @@ def replacing_Consecutive(s):
         
     return output
 # print(replacing_Consecutive("alluarjuuuun"))
+
+'''Create a Python program to check if one string is a rotation of another string.
+For example, "abcd" is a rotation of "cdab" using slicing operations.'''
+
+def is_rotation(s1,s2):
+    if len(s1)!=len(s2):
+        return True
+    new=s1*2
+    if s2 in new:
+        return True
+    return False
+print(is_rotation("keerthi","thikeer"))
