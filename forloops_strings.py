@@ -90,3 +90,15 @@ def are_anagrams(s1,s2):
     return False    
 # print(are_anagrams("rak esh","eshrak"))
 
+def words_freq(sentence):
+    words={}
+    sentences=sentence.lower().split()
+    # print(sentence)
+    for word in sentences:
+        if word in words:
+            print(word)
+            words[word]+=1
+        else:
+            words[word]=1
+    return words
+# print(words_freq("india is my Country India Is MY country"))
