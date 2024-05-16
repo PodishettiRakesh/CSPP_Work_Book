@@ -70,3 +70,12 @@ def is_rotation(str1,str2):
             return True
     return False
 # print(is_rotation("abcd","cdab"))
+
+# -----------------------------------------------------------------------------
+# Learning Objective: Use string operations and methods to solve problems
+st="hello world"
+# print(st.replace("hello","hi"))
+# hel=st.strip(" ")
+# print(hel)
+i=st.find("world")
+print(i)
