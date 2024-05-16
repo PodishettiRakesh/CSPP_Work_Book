@@ -73,9 +73,20 @@ def is_rotation(str1,str2):
 
 # -----------------------------------------------------------------------------
 # Learning Objective: Use string operations and methods to solve problems
-st="hello world"
-# print(st.replace("hello","hi"))
-# hel=st.strip(" ")
-# print(hel)
-i=st.find("world")
-print(i)
+
+'''Write a Python program to check if two given strings are anagrams 
+of each other using string operations and methods.'''
+def are_anagrams(s1,s2):
+    s1=s1.replace(" ","").lower()
+    s2=s2.replace(" ","").lower()
+    if len(s1)!=len(s2):
+        return False
+  
+    ss1=sorted(s1)
+    ss2=sorted(s2)
+    # print(ss1,ss2)
+    if ss1==ss2:
+        return True
+    return False    
+# print(are_anagrams("rak esh","eshrak"))
+
