@@ -103,15 +103,77 @@ def words_freq(sentence):
     return words
 # print(words_freq("india is my Country India Is MY country"))
 
-def checkPassword(password):
-    if len(password)>8:
-        if "@" in password:
-            for i in password:
-                if i.isdigit():
-                    return "strong password"
-            return "password should contain atleast one number"
-        return "@  is missing"
-    return "atleast above 8 chars"
-# print(checkPassword("rakesh"))
-# print(checkPassword("rakesh@"))
-# print(checkPassword("rakesh@123"))
+
+
+'''Develop a Python program that checks the strength of a given password based on 
+certain criteria (e.g., length, presence of uppercase letters, digits, special 
+characters) using string operations and methods.'''
+# def checkPassword(password):
+#     if len(password)>8:
+#         if "@" in password:
+#             for i in password:
+#                 if i.isdigit():
+#                     return "strong password"
+#             return "password should contain atleast one number"
+#         return "@  is missing"
+#     return "atleast above 8 chars"
+# # print(checkPassword("rakesh"))
+# # print(checkPassword("rakesh@"))
+# # print(checkPassword("rakesh@123"))
+def check_password_strength(password):
+    # Criteria for password strength
+    min_length = 8
+    has_uppercase = False
+    has_digit = False
+    has_special = False
+    special_characters = "!@#$%^&*()-_=+[{]}|;:,<.>/?"
+    
+    # Check password length
+    if len(password) < min_length:
+        return "Password is too short. It should be at least 8 characters long."
+    
+    # Check for uppercase letters, digits, and special characters
+    for char in password:
+        if char.isupper():
+            has_uppercase = True
+        elif char.isdigit():
+            has_digit = True
+        elif char in special_characters:
+            has_special = True
+    
+    # Check if all criteria are met
+    if has_uppercase and has_digit and has_special:
+        return "Password is strong."
+    else:
+        strength = []
+        if not has_uppercase:
+            strength.append("uppercase letters")
+        if not has_digit:
+            strength.append("digits")
+        if not has_special:
+            strength.append("special characters")
+        return "Password is weak. It is missing: " + ", ".join(strength)
+
+# password = input("Enter a password: ")
+# print(check_password_strength(password))
+
+
+
+'''Write a Python program that validates if a given string is a valid 
+email address based on certain rules (e.g., presence of "@" symbol, 
+proper domain format) using string operations and methods.'''
+def validEmail(email):
+    if "@" not in email:
+        return False
+    first,domain=email.split("@")
+    # print(first)
+    # print(domain)
+    if not first or not domain:
+        return False
+    if "." not in domain:
+        return False
+    dom1,dom2=domain.split(".")
+    if not dom1 or not dom2:
+        return False
+    return True
+print(validEmail("rakesh123@gmail.com"))
