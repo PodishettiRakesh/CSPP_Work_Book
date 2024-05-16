@@ -176,4 +176,24 @@ def validEmail(email):
     if not dom1 or not dom2:
         return False
     return True
-print(validEmail("rakesh123@gmail.com"))
+# print(validEmail("rakesh123@gmail.com"))
+
+
+'''Create a Python program that encrypts and decrypts a given text using a simple 
+encryption algorithm (e.g., Caesar cipher) using string operations and methods.
+# '''
+print(ord("R"))
+print(ord("r"))
+def encrypt(text):
+    cipertext=""
+    for each in text:
+        if each.isalpha():
+            if each.isupper():
+                cipertext+=chr((ord(each)-65-2)%26+65)
+            else:
+                cipertext+=chr((ord(each)-97-2)%26+97)
+        else:
+            cipertext+=each
+    return cipertext
+print(encrypt("rakesh"))
+
