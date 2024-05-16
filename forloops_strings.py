@@ -102,3 +102,16 @@ def words_freq(sentence):
             words[word]=1
     return words
 # print(words_freq("india is my Country India Is MY country"))
+
+def checkPassword(password):
+    if len(password)>8:
+        if "@" in password:
+            for i in password:
+                if i.isdigit():
+                    return "strong password"
+            return "password should contain atleast one number"
+        return "@  is missing"
+    return "atleast above 8 chars"
+# print(checkPassword("rakesh"))
+# print(checkPassword("rakesh@"))
+# print(checkPassword("rakesh@123"))
