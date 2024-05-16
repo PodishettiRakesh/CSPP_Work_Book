@@ -182,18 +182,32 @@ def validEmail(email):
 '''Create a Python program that encrypts and decrypts a given text using a simple 
 encryption algorithm (e.g., Caesar cipher) using string operations and methods.
 # '''
-print(ord("R"))
-print(ord("r"))
+# print(ord("R"))
+# print(ord("r"))
 def encrypt(text):
     cipertext=""
     for each in text:
         if each.isalpha():
             if each.isupper():
-                cipertext+=chr((ord(each)-65-2)%26+65)
+                cipertext+=chr((ord(each)-65+2)%26+65)
             else:
-                cipertext+=chr((ord(each)-97-2)%26+97)
+                cipertext+=chr((ord(each)-97+2)%26+97)
         else:
             cipertext+=each
     return cipertext
-print(encrypt("rakesh"))
+# print(encrypt("rakesh"))
 
+def password_decrypt(text):
+    password=""
+    for each in text:
+        if each.isalpha():
+            if each.isupper():
+                password+=chr((ord(each)-65-2)%26+65)
+            else:
+                password+=chr((ord(each)-97-2)%26+97)
+        else:
+            password+=each
+    return password
+
+# encrypt_pass=encrypt("Rakesh")
+# print(password_decrypt(encrypt_pass))
