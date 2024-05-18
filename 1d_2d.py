@@ -119,5 +119,11 @@ def removeduplicates(lst):
             new.append(each)
     return new
 # print(removeduplicates([1,1,2,6,4,3,4]))
+
 '''Write a Python program that takes two sorted lists as input, merges them into a single sorted list, 
 and prints the merged list.'''
+def mergeSorted(lst1,lst2):
+    lst1.extend(lst2)
+    new=sorted(lst1)
+    return new
+# print(mergeSorted([1,3,4,5],[2,4,6,8,10]))
