@@ -78,6 +78,18 @@ mat1 = [
 ]
 # print(transposeOfMatrix(mat1))
 
-               
+
+'''Create a Python program that takes a target value and a 2D list as input, 
+then searches for the target value within the list. If found, print its row 
+and column indices; otherwise, print "Not found".'''
+def findTarget(list,target):
+    for i in range(len(list)):
+        for j in range(len(list[i])):
+            if list[i][j]==target:
+                return f"row {i+1}  col {j+1}"
+    return "target not found in given 2d list"
+
+# print(findTarget([[1,2,3],[4,5,6],[7,8,9,10]],5))
+        
                
           
