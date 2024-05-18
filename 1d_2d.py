@@ -48,7 +48,17 @@ def findmax(nums):
     return result
 print(findmax([1,2,5,8,9,24,12]))
 
-
+'''Develop a Python program that takes a list of words as input and 
+counts the frequency of each word, then prints the word-frequency pairs.'''
+def frequency_words(words):
+    freq={}
+    for word in words:
+        if word in freq:
+             freq[word]+=1
+        else:
+             freq[word]=1
+    return freq
+print(frequency_words(["raki","mama","kavya","mama","keerthi","raki"]))
 
 
 
