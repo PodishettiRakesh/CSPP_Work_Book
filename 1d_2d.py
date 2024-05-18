@@ -105,6 +105,10 @@ def sumElements(list):
 # print(sumElements([1,2,3,4]))
 
 '''Create a Python program to reverse the order of elements in a given list and print the reversed list.'''
+def reverseElements(lis):
+    x=list(reversed(lis))
+    return x
+print(reverseElements([1,2,3,4]))
 
 '''Develop a Python program that takes a list as input, removes duplicate elements from the list, and prints 
 the modified list without duplicates.'''
