@@ -46,7 +46,7 @@ mat2 = [
 def findmax(nums):
     result=max((row) for row in nums)
     return result
-print(findmax([1,2,5,8,9,24,12]))
+# print(findmax([1,2,5,8,9,24,12]))
 
 '''Develop a Python program that takes a list of words as input and 
 counts the frequency of each word, then prints the word-frequency pairs.'''
@@ -90,6 +90,40 @@ def findTarget(list,target):
     return "target not found in given 2d list"
 
 # print(findTarget([[1,2,3],[4,5,6],[7,8,9,10]],5))
-        
-               
-          
+
+# lis=[1,2,3,1,2,1]
+# lis.reverse()
+# lis.remove(1)
+# lis.reverse()
+# print(lis)
+
+
+      
+'''Write a Python program to calculate and print the sum of all elements in a given list.'''
+def sumElements(list):
+    return sum(list)
+# print(sumElements([1,2,3,4]))
+
+'''Create a Python program to reverse the order of elements in a given list and print the reversed list.'''
+def reverseElements(lis):
+    x=list(reversed(lis))
+    return x
+# print(reverseElements([1,2,3,4]))
+
+'''Develop a Python program that takes a list as input, removes duplicate elements from the list, and prints 
+the modified list without duplicates.'''
+def removeduplicates(lst):
+    new=[]
+    for each in lst:
+        if each not in new:
+            new.append(each)
+    return new
+# print(removeduplicates([1,1,2,6,4,3,4]))
+
+'''Write a Python program that takes two sorted lists as input, merges them into a single sorted list, 
+and prints the merged list.'''
+def mergeSorted(lst1,lst2):
+    lst1.extend(lst2)
+    new=sorted(lst1)
+    return new
+# print(mergeSorted([1,3,4,5],[2,4,6,8,10]))
