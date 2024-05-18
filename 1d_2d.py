@@ -58,7 +58,26 @@ def frequency_words(words):
         else:
              freq[word]=1
     return freq
-print(frequency_words(["raki","mama","kavya","mama","keerthi","raki"]))
+# print(frequency_words(["raki","mama","kavya","mama","keerthi","raki"]))
 
 
+'''Write a Python program to find the transpose of a given matrix (2D list) and print the result.'''
+def transposeOfMatrix(matrix):
+    transposeMatrix=[]
+    for i in range(len(matrix)):
+        row=[]
+        for j  in range(len(matrix[0])):
+            row.append(matrix[j][i])
+        transposeMatrix.append(row)
+    return transposeMatrix
 
+mat1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+# print(transposeOfMatrix(mat1))
+
+               
+               
+          
