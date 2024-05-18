@@ -127,3 +127,11 @@ def mergeSorted(lst1,lst2):
     new=sorted(lst1)
     return new
 # print(mergeSorted([1,3,4,5],[2,4,6,8,10]))
+
+'''Create a Python program that rotates the elements of a given list to the right by a specified number of 
+positions and prints the rotated list.'''
+
+def rotateRight(lst,positions):
+    rotated=lst[-positions:]+lst[0:-positions]
+    return rotated
+# print(rotateRight([1,2,3,4],2))
