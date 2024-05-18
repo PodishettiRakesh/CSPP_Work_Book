@@ -108,10 +108,16 @@ def sumElements(list):
 def reverseElements(lis):
     x=list(reversed(lis))
     return x
-print(reverseElements([1,2,3,4]))
+# print(reverseElements([1,2,3,4]))
 
 '''Develop a Python program that takes a list as input, removes duplicate elements from the list, and prints 
 the modified list without duplicates.'''
-
+def removeduplicates(lst):
+    new=[]
+    for each in lst:
+        if each not in new:
+            new.append(each)
+    return new
+# print(removeduplicates([1,1,2,6,4,3,4]))
 '''Write a Python program that takes two sorted lists as input, merges them into a single sorted list, 
 and prints the merged list.'''
