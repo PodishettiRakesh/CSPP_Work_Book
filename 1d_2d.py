@@ -238,4 +238,8 @@ arr=[2,3,4,10,40]
 target=11
 # print(fun(arr,0,len(arr)-1,target))
 
-
+def fun(arr):
+    if arr:
+        print(arr[-1])
+        fun(arr[:-1])
+# fun([1,2,3,4])
