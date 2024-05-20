@@ -243,3 +243,11 @@ def fun(arr):
         print(arr[-1])
         fun(arr[:-1])
 # fun([1,2,3,4])
+
+'''Write a recursive function to calculate the sum of digits of a positive integer.'''
+def sumOfDigits(number):
+    if number==0:
+        return 0
+    else:
+        return number%10+sumOfDigits(number//10)    
+print(sumOfDigits(12345))
