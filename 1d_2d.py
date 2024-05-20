@@ -250,4 +250,13 @@ def sumOfDigits(number):
         return 0
     else:
         return number%10+sumOfDigits(number//10)    
-print(sumOfDigits(12345))
+# print(sumOfDigits(12345))
+
+
+'''Implement a recursive function to compute the factorial of a non-negative integer.'''
+def factorilaOfInteger(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*factorilaOfInteger(n-1)
+# print(factorilaOfInteger(4)).
