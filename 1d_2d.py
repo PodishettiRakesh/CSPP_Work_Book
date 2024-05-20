@@ -260,3 +260,12 @@ def factorilaOfInteger(n):
     else:
         return n*factorilaOfInteger(n-1)
 # print(factorilaOfInteger(4)).
+
+
+'''Create a recursive function to count the number of digits in a positive integer.'''
+def countDigits(n):
+    if n==0:
+        return 0
+    else:
+        return 1+countDigits(n//10)  
+# print(countDigits(1234))
