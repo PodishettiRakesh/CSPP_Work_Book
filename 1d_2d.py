@@ -127,3 +127,155 @@ def mergeSorted(lst1,lst2):
     new=sorted(lst1)
     return new
 # print(mergeSorted([1,3,4,5],[2,4,6,8,10]))
+
+'''Create a Python program that rotates the elements of a given list to the right by a specified number of 
+positions and prints the rotated list.'''
+
+def rotateRight(lst,positions):
+    rotated=lst[-positions:]+lst[0:-positions]
+    return rotated
+# print(rotateRight([1,2,3,4],2))
+
+# Immutable datatype in python
+'''Immutable Data Types
+Immutable data types are those whose values cannot be changed after they are created. If you need to modify an immutable object, you must create a new object with the new value.
+
+Common immutable data types in Python include:
+
+Integers
+Floats
+Strings
+Tuples'''
+
+'''Common mutable data types in Python include:
+
+Lists
+Dictionaries
+Sets'''
+
+
+# x=5
+# print(x)
+# print(id(x))
+# x=10
+# print(x)
+# print(id(x))
+
+# mutable data types 
+# tup=(1,2,3,4)
+# print(tup.append(7))
+
+# dic={"a":1,"b":2}
+# print(dic)
+
+# dic["c"]=3
+# print(dic)
+
+
+# s="hello"
+# print(s.append("w"))
+
+# st={1,2,3}
+# st.add(4)
+# print(st)
+
+
+# lst=[1,2,3,4,5]
+# ele=lst.pop()
+# print(lst)
+# print(ele)
+
+# def rev(lis):
+#     lis.clear()
+# lis=[1,2,3,4]
+# rev(lis)
+# print(lis)
+
+
+'''find the factorial for the given number'''
+def fun(n):
+    if n==0:
+        return 1
+    else:
+        return n*fun(n-1)
+# print(fun(5))
+
+def fun(n):
+    if n<=1:
+        return n 
+    else:
+        return fun(n-1)+fun(n-2)
+# print(fun(6))
+
+def fun(n):
+    if n>0:
+        print(n)
+        fun(n-1)
+# fun(5)
+
+def fun(n):
+    if n==1:
+        return 1
+    else:
+        return n+fun(n-1)
+# print(fun(5))
+
+def fun(array,low,high,target):
+    # high=len(array-1)
+    # low=0
+    if high>=low:
+        mid=(high+low)//2
+        if array[mid]==target:
+            return array[mid]
+        elif array[mid]>target:
+            
+            return fun(array,low,mid-1,target)
+        else:
+            return fun(array,mid+1,high,target)
+    else:
+        return -1
+arr=[2,3,4,10,40]
+target=11
+# print(fun(arr,0,len(arr)-1,target))
+
+def fun(arr):
+    if arr:
+        print(arr[-1])
+        fun(arr[:-1])
+# fun([1,2,3,4])
+
+'''Write a recursive function to calculate the sum of digits of a positive integer.'''
+def sumOfDigits(number):
+    if number==0:
+        return 0
+    else:
+        return number%10+sumOfDigits(number//10)    
+# print(sumOfDigits(12345))
+
+
+'''Implement a recursive function to compute the factorial of a non-negative integer.'''
+def factorilaOfInteger(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*factorilaOfInteger(n-1)
+# print(factorilaOfInteger(4)).
+
+
+'''Create a recursive function to count the number of digits in a positive integer.'''
+def countDigits(n):
+    if n==0:
+        return 0
+    else:
+        return 1+countDigits(n//10)  
+# print(countDigits(1234))
+
+'''Write a recursive function to find the greatest common divisor (GCD) of two positive integers.'''
+def gcd(n1, n2):
+    if n1 == 0:
+        return n2
+    elif n2 == 0:
+        return n1
+    else:
+        return gcd(n2, n1 % n2)
+# print(gcd(22,36))
