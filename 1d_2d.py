@@ -269,3 +269,13 @@ def countDigits(n):
     else:
         return 1+countDigits(n//10)  
 # print(countDigits(1234))
+
+'''Write a recursive function to find the greatest common divisor (GCD) of two positive integers.'''
+def gcd(n1, n2):
+    if n1 == 0:
+        return n2
+    elif n2 == 0:
+        return n1
+    else:
+        return gcd(n2, n1 % n2)
+# print(gcd(22,36))
