@@ -49,3 +49,16 @@ def merge_dicts(dic1,dic2):
 dic1={'india': 2, 'america': 1, 'rakesh': 1, 'keerthi': 2, 'kavya': 1}
 dic2={'india': 2, 'america': 1, "australia":2, "paris":1}
 # print(merge_dicts(dic1,dic2))
+
+'''Given a list of strings, write a function to group the strings into lists of anagrams. 
+Two strings are considered anagrams if they contain the same characters in a different order.'''
+def grouping_anagrams(lst):
+    dict={}
+    for each in lst:
+        sorted_each=" ".join(sorted(each))
+        if sorted_each in dict:
+            dict[sorted_each].append(each)
+        else:
+            dict[sorted_each]=[each]
+    return dict
+# print(grouping_anagrams(["listen", "silent", "enlist", "rat", "tar", "art", "evil", "vile", "live","rakesh"]))
