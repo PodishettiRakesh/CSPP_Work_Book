@@ -279,3 +279,45 @@ def gcd(n1, n2):
     else:
         return gcd(n2, n1 % n2)
 # print(gcd(22,36))
+
+
+'''Implement a recursive binary search algorithm to find the index of a target element in a sorted list.'''
+# def binarySearch(lst,target):
+#     # print(lst)
+#     low=0
+#     # print(low,"low")
+
+#     high=len(lst)-1
+#     # print(high,"high")
+#     mid=(low+high)//2
+#     # print(mid,"mid")
+
+#     if target==lst[mid]:
+#         return lst[mid]
+#     elif target>lst[mid]:
+#         low=mid+1
+#         return binarySearch(lst[low:high+1],target)
+#     else:
+#         high=mid
+#         return binarySearch(lst[low:high+1],target)
+
+# print(binarySearch([1,2,3,4,5,10],4))
+
+
+
+def binarysearch(lst,target):
+    def search(low,high):
+        if low>high:
+            return -1
+        mid=(low+high)//2
+        if lst[mid]==target:
+            return mid
+        elif target>lst[mid]:
+            return search(mid+1,high)
+        else:
+            return search(low,mid-1)
+    return search(0,len(lst)-1)
+# print(binarysearch([1, 2, 3, 4, 5, 10], 10))  
+# print(binarysearch([1, 2, 3, 4, 5, 10], 3))   
+# print(binarysearch([1, 2, 3, 4, 5, 10], 6)) 
+
