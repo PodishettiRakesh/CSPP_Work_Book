@@ -20,3 +20,16 @@ def create_dict(lst):
             dic[i]=1
     return dic
 # print(create_dict(["india","america","rakesh","keerthi","keerthi","kavya","india"]))
+
+'''Create a function that takes a string as input and returns a dictionary where the 
+keys are the unique characters in the string, and the values are the frequencies of those characters.'''
+
+def chars_dict(str):
+    dic={}
+    for i in str:
+        if i in dic:
+            dic[i]+=1
+        else:
+            dic[i]=1
+    return dic
+# print(chars_dict("Keerthana"))
