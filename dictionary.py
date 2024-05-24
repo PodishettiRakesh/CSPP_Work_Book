@@ -62,3 +62,11 @@ def grouping_anagrams(lst):
             dict[sorted_each]=[each]
     return dict
 # print(grouping_anagrams(["listen", "silent", "enlist", "rat", "tar", "art", "evil", "vile", "live","rakesh"]))
+
+'''Write a function that takes a dictionary as input and returns a new dictionary where the keys and values are swapped.'''
+def swamp_items(dict):
+    swaped_dict={}
+    for key,value in dict.items():
+        swaped_dict[value]=key
+    return swaped_dict
+# print(swamp_items({"ap":2,"ban":3,"che":5}))
