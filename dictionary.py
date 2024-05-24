@@ -70,3 +70,17 @@ def swamp_items(dict):
         swaped_dict[value]=key
     return swaped_dict
 # print(swamp_items({"ap":2,"ban":3,"che":5}))
+
+'''Create a function that takes a dictionary as input and returns the key with the highest 
+frequency value. If there are multiple 
+keys with the same highest frequency value, return the first encountered key.'''
+def high_frequency_value(dic):
+    highest_value=0
+    highest_Key=None
+    for key,value in dic.items():
+        if value > highest_value:
+            highest_value=value
+            highest_Key=key
+    return highest_Key
+dic={'india': 2, 'america': 1, 'rakesh': 1, 'keerthi': 2, 'kavya': 1}
+# print(high_frequency_value(dic))
