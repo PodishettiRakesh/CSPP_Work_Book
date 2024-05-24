@@ -279,3 +279,85 @@ def gcd(n1, n2):
     else:
         return gcd(n2, n1 % n2)
 # print(gcd(22,36))
+
+
+'''Implement a recursive binary search algorithm to find the index of a target element in a sorted list.'''
+# def binarySearch(lst,target):
+#     # print(lst)
+#     low=0
+#     # print(low,"low")
+
+#     high=len(lst)-1
+#     # print(high,"high")
+#     mid=(low+high)//2
+#     # print(mid,"mid")
+
+#     if target==lst[mid]:
+#         return lst[mid]
+#     elif target>lst[mid]:
+#         low=mid+1
+#         return binarySearch(lst[low:high+1],target)
+#     else:
+#         high=mid
+#         return binarySearch(lst[low:high+1],target)
+
+# print(binarySearch([1,2,3,4,5,10],4))
+
+
+
+def binarysearch(lst,target):
+    def search(low,high):
+        if low>high:
+            return -1
+        mid=(low+high)//2
+        if lst[mid]==target:
+            return mid
+        elif target>lst[mid]:
+            return search(mid+1,high)
+        else:
+            return search(low,mid-1)
+    return search(0,len(lst)-1)
+# print(binarysearch([1, 2, 3, 4, 5, 10], 10))  
+# print(binarysearch([1, 2, 3, 4, 5, 10], 3))   
+# print(binarysearch([1, 2, 3, 4, 5, 10], 6)) 
+
+'''Write a recursive function to perform the merge sort algorithm on a given list of integers.
+'''
+def mergeSort(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    leftPart=arr[:mid]
+    rightPart=arr[mid:]
+    # print(leftPart,rightPart)
+    leftPart=mergeSort(leftPart)
+    rightPart=mergeSort(rightPart)
+    return merge(leftPart,rightPart)
+
+def merge(leftPart,rightPart):
+    
+    i=0
+    j=0
+    temp=[]
+    while i <len(leftPart) and j<len(rightPart):
+        if leftPart[i]<=rightPart[j]:
+            temp.append(leftPart[i])
+            i+=1
+        else:
+            temp.append(rightPart[j])
+            j+=1
+        # print(temp,"temp")
+
+    while i<len(leftPart):
+        temp.append(leftPart[i])
+        i+=1
+    while j<len(rightPart):
+        temp.append(rightPart[j])
+        j+=1
+    
+    return temp
+
+
+# arr = [12, 11, 13, 5, 6, 7]
+# print(mergeSort(arr))
+
